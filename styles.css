@@ -1,0 +1,179 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía más moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo más claro */
+    color: #343a40; /* Color de texto más oscuro para mejor legibilidad */
+}
+
+header {
+    background-color: #212529;
+    color: #fff;
+    padding: 1.5rem 0; /* Mayor padding para darle más espacio */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaciado mayor entre elementos del menú */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #17a2b8; /* Color de acento */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 5rem 0; /* Mayor padding para separar mejor las secciones */
+    text-align: center;
+}
+
+#home {
+    background-color: #343a40;
+    color: #fff;
+    padding: 5rem 2rem;
+    background-image: linear-gradient(to right, #4e555b, #343a40);
+}
+
+#about, #projects, #contact {
+    background-color: #fff;
+    color: #343a40;
+}
+
+#about h2, #projects h2, #contact h2 {
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    color: #17a2b8; /* Color de acento */
+}
+
+.project {
+    background-color: #e9ecef;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #343a40;
+}
+
+.project a {
+    color: #17a2b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #138496;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #17a2b8;
+    outline: none;
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2.5rem;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #138496;
+    transform: translateY(-3px);
+}
+
+.whatsapp-contact {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.whatsapp-contact a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-contact a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.whatsapp-contact a:hover {
+    background-color: #1DA851;
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: #212529;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para separar del contenido */
+    margin-top: 3rem;
+}
