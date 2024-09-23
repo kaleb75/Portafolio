@@ -1,19 +1,19 @@
 /* styles.css */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía más moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Color de fondo más claro */
-    color: #343a40; /* Color de texto más oscuro para mejor legibilidad */
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
 header {
     background-color: #212529;
     color: #fff;
-    padding: 1.5rem 0; /* Mayor padding para darle más espacio */
+    padding: 1.5rem 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -25,7 +25,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px; /* Espaciado mayor entre elementos del menú */
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -37,7 +37,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #17a2b8; /* Color de acento */
+    color: #17a2b8;
+}
+
+.linkedin-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-icon img:hover {
+    transform: scale(1.1);
 }
 
 .container {
@@ -47,26 +57,105 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 5rem 0; /* Mayor padding para separar mejor las secciones */
+    padding: 5rem 0;
     text-align: center;
 }
 
 #home {
-    background-color: #343a40;
+    background: linear-gradient(135deg, #4e555b, #343a40);
     color: #fff;
     padding: 5rem 2rem;
-    background-image: linear-gradient(to right, #4e555b, #343a40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-#about, #projects, #contact {
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+#home p {
+    font-size: 1.5rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#about, #projects, #contact, #linkedin {
     background-color: #fff;
     color: #343a40;
 }
 
-#about h2, #projects h2, #contact h2 {
+#about h2, #projects h2, #contact h2, #linkedin h2 {
     margin-bottom: 2.5rem;
     font-size: 2.2rem;
-    color: #17a2b8; /* Color de acento */
+    color: #17a2b8;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2::after, #projects h2::after, #contact h2::after, #linkedin h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #17a2b8;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.linkedin-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #0077b5;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+    transform: translateY(-3px);
+}
+
+.linkedin-widget {
+    margin-top: 2rem;
 }
 
 .project {
@@ -174,6 +263,28 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para separar del contenido */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
     margin-top: 3rem;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
