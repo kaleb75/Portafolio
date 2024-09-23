@@ -9,8 +9,8 @@
     <meta name="author" content="Kaleb Chavira">
     <meta property="og:title" content="Kaleb Chavira Portfolio">
     <meta property="og:description" content="Explore the portfolio of Kaleb Chavira, a skilled full-stack developer and IT/OT expert.">
-    <meta property="og:image" content="https://<username>.github.io/mi-portafolio/path/to/your/image.jpg"> <!-- Ruta de la imagen desde GitHub Pages -->
-    <meta property="og:url" content="https://<username>.github.io/mi-portafolio">
+    <meta property="og:image" content="https://<username>.github.io/mi-portafolio/path/to/your/image.jpg"> <!-- Replace with actual image path -->
+    <meta property="og:url" content="https://<username>.github.io/mi-portafolio"> <!-- Replace with your GitHub Pages URL -->
     <meta name="twitter:card" content="summary_large_image">
     <title>Kaleb Chavira Portfolio</title>
     <link rel="stylesheet" href="styles.css">
@@ -24,27 +24,31 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/joaquin-kaleb-chavira-gonzalez-a167a0219/" class="linkedin-icon" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="home">
         <div class="container">
-            <h2>About Me</h2>
-            <img src="https://github.com/kaleb75/Portafolio/blob/main/Images/unnamed.jpg" alt="Kaleb Chavira" class="profile-pic">
-            <p><strong>IT Professional & Software Engineer:</strong> Extensive experience in full-stack development, optimizing systems, and developing critical applications for SMT production. Skilled in Java, Node.js, React, and more.</p>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm <strong>Kaleb Chavira</strong>, a full-stack developer and IT/OT expert.</p>
         </div>
-    </section>   
-    
+    </section>
 
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p><strong>IT Professional & Software Engineer:</strong> Extensive experience in full-stack development, including Java SE, React, Node.js, and front-end technologies (HTML, CSS, JavaScript).</p>
-            <p><strong>Current Role:</strong> OT Lead Engineer at Inventec, focusing on optimizing systems and developing critical applications for SMT production. Responsible for developing and maintaining MES manufacturing systems.</p>
-            <p><strong>Expertise:</strong> Skilled in network management at both carrier and enterprise levels, with extensive knowledge of Windows server environments.</p>
-            <p><strong>Database Management:</strong> Proficient in SSMS and MySQL, ensuring effective database solutions and management.</p>
-            <p><strong>Leadership:</strong> Proven track record in leading teams, managing technical solutions, and delivering results in diverse technological environments.</p>
+            <div class="about-content">
+                <img src="https://github.com/kaleb75/Portafolio-KLC/blob/main/Images/unnamed.jpg?raw=true" alt="Kaleb Chavira" class="profile-pic">
+                <div class="about-text">
+                    <p><strong>IT Professional & Software Engineer:</strong> Extensive experience in full-stack development, including Java SE, React, Node.js, and front-end technologies (HTML, CSS, JavaScript).</p>
+                    <p><strong>Current Role:</strong> OT Lead Engineer at Inventec, focusing on optimizing systems and developing critical applications for SMT production. Responsible for developing and maintaining MES manufacturing systems.</p>
+                    <p><strong>Expertise:</strong> Skilled in network management at both carrier and enterprise levels, with extensive knowledge of Windows server environments.</p>
+                    <p><strong>Database Management:</strong> Proficient in SSMS and MySQL, ensuring effective database solutions and management.</p>
+                    <p><strong>Leadership:</strong> Proven track record in leading teams, managing technical solutions, and delivering results in diverse technological environments.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -62,10 +66,22 @@
         </div>
     </section>
 
+    <section id="linkedin">
+        <div class="container">
+            <h2>Connect with Me on LinkedIn</h2>
+            <p>Stay updated with my latest projects and professional activities.</p>
+            <a href="https://www.linkedin.com/in/joaquin-kaleb-chavira-gonzalez-a167a0219/" target="_blank" class="linkedin-button">Visit My LinkedIn Profile</a>
+            <div class="linkedin-widget">
+                <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+                <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="joaquin-kaleb-chavira-gonzalez-a167a0219"><a class="LI-simple-link" href='https://mx.linkedin.com/in/joaquin-kaleb-chavira-gonzalez-a167a0219?trk=profile-badge'>Joaquin Kaleb Chavira Gonzalez</a></div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <form aria-label="Contact Form">
+            <form aria-label="Contact Form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required minlength="3">
                 <label for="email">Email:</label>
@@ -85,6 +101,7 @@
 
     <footer>
         <p>&copy; 2023 Kaleb Chavira. All rights reserved.</p>
+        <a href="https://www.linkedin.com/in/joaquin-kaleb-chavira-gonzalez-a167a0219/" target="_blank" class="linkedin-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
     </footer>
 
     <script src="scripts.js"></script>
