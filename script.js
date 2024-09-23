@@ -44,3 +44,12 @@ if (whatsappBtn) { // Check if the WhatsApp button exists
         alert('You will be redirected to WhatsApp.');
     });
 }
+
+// scripts.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const whatsappBtn = document.getElementById("whatsappBtn");
+    whatsappBtn.addEventListener("click", function() {
+        alert("You will be redirected to WhatsApp to contact me!");
+    });
+});
