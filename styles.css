@@ -310,13 +310,13 @@ footer {
     margin: 1.5rem 0;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px var(--light-shadow);
+    box-shadow: 10px 10px 10px var(--medium-shadow);
     padding: 2rem;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .certification:hover {
-    box-shadow: 0 4px 10px var(--medium-shadow);
+    box-shadow: 30px 30px 30px var(--medium-shadow);
     transform: translateY(-5px);
 }
 
