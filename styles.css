@@ -1,19 +1,29 @@
 /* styles.css */
 
+/* Define CSS variables for colors */
+:root {
+    --primary-color: #17a2b8;
+    --dark-bg: #212529;
+    --light-bg: #f8f9fa;
+    --text-color: #343a40;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    --medium-shadow: rgba(0, 0, 0, 0.15);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
+    background-color: var(--light-bg);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #212529;
+    background-color: var(--dark-bg);
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--light-shadow);
 }
 
 nav ul {
@@ -37,7 +47,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #17a2b8;
+    color: var(--primary-color);
 }
 
 .linkedin-icon img {
@@ -62,7 +72,7 @@ section {
 }
 
 #home {
-    background: linear-gradient(135deg, #4e555b, #343a40);
+    background: linear-gradient(135deg, #4e555b, var(--dark-bg));
     color: #fff;
     padding: 5rem 2rem;
     display: flex;
@@ -85,22 +95,22 @@ section {
 
 #about, #projects, #contact, #linkedin {
     background-color: #fff;
-    color: #343a40;
+    color: var(--text-color);
 }
 
-#about h2, #projects h2, #contact h2, #linkedin h2 {
+h2 {
     margin-bottom: 2.5rem;
     font-size: 2.2rem;
-    color: #17a2b8;
+    color: var(--primary-color);
     position: relative;
     display: inline-block;
 }
 
-#about h2::after, #projects h2::after, #contact h2::after, #linkedin h2::after {
+h2::after {
     content: '';
     width: 50px;
     height: 3px;
-    background-color: #17a2b8;
+    background-color: var(--primary-color);
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -120,7 +130,7 @@ section {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--light-shadow);
     transition: transform 0.3s ease;
 }
 
@@ -163,23 +173,23 @@ section {
     padding: 2rem;
     margin: 1.5rem 0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--light-shadow);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px var(--medium-shadow);
 }
 
 .project h3 {
     margin-top: 0;
-    color: #343a40;
+    color: var(--text-color);
 }
 
 .project a {
-    color: #17a2b8;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -210,14 +220,14 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    border-color: #17a2b8;
+    border-color: var(--primary-color);
     outline: none;
 }
 
 form button {
     margin-top: 1.5rem;
     padding: 0.75rem 2.5rem;
-    background-color: #17a2b8;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -259,11 +269,11 @@ form button:hover {
 }
 
 footer {
-    background-color: #212529;
+    background-color: var(--dark-bg);
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 6px var(--light-shadow);
     margin-top: 3rem;
 }
 
@@ -288,3 +298,50 @@ footer {
         transform: translateY(0);
     }
 }
+#certifications {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.certification {
+    margin: 1.5rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--light-shadow);
+    padding: 2rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.certification:hover {
+    box-shadow: 0 4px 10px var(--medium-shadow);
+    transform: translateY(-5px);
+}
+
+.certification h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.certification a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.certification a:hover {
+    color: #0056b3;
+}
+
+.certification p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.certification span {
+    font-style: italic;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+
