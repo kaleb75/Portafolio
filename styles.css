@@ -9,6 +9,8 @@
     --text-color: #eaeaea; /* Color de texto claro */
     --light-shadow: rgba(0, 0, 0, 0.1);
     --medium-shadow: rgba(0, 0, 0, 0.15);
+    --tercolor: #00ff0073;
+
 }
 
 body {
@@ -365,29 +367,63 @@ footer {
     color: var(--light-bg);
 }
 
-#scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: var(--light-bg);
-    color: var(--primary-color);
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-#scrollToTopBtn:hover {
-    background-color: #d32f2f;
-}
-
 .card img {
     max-height: 150px;
     object-fit: contain;
     
 }
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.skill i {
+    font-size: 1.6rem; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    color: var(--light-bg); /* Color del icono */
+}
+
+.skill span {
+    flex-grow: 1; /* Para que el texto use el espacio disponible */
+    
+}
+
+.progress-bar {
+    height: 8px; /* Altura de la barra de progreso al 80% */
+    background-color: var(--secondary-color); /* Color de fondo de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Para asegurarse de que el contenido no se desborde */
+    margin-left: 10px; /* Espacio entre el texto y la barra de progreso */
+    width: 100%; /* Asegura que la barra ocupe el espacio completo */
+}
+
+.progress-fill {
+    height: 100%; /* Altura completa */
+    background-color: var(--tercolor); /* Color de la barra de progreso */
+    width: 80%; /* Cambia este porcentaje para representar tu habilidad */
+}
+.skill-level {
+    margin-left: 10px; /* Espacio entre la barra de progreso y el nivel */
+    font-size: 0.8rem; /* Tamaño del texto al 80% */
+}
+
+    #scroll-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        display: none;
+      }
+      
+      #scroll-to-top-btn:hover {
+        background-color: #555;
+      }
