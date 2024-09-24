@@ -25,6 +25,31 @@ header {
     padding: 1.5rem 0;
     text-align: center;
     box-shadow: 0 4px 6px var(--light-shadow);
+    position: relative; /* Para manejar el menú desplegable si es necesario */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Cambia la dirección del menú a vertical */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espacio entre elementos del menú */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+
+    header p {
+        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    }
 }
 
 nav ul {
