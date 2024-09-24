@@ -2,11 +2,11 @@
 
 /* Define CSS variables for colors */
 :root {
-    --primary-color: #073862; /* Cambiado a color azul */
-    --secondary-color: #17a2b8; /* Color secundario */
-    --dark-bg: #212529;
-    --light-bg: #f8f9fa;
-    --text-color: #343a40;
+    --primary-color: #1a1a2e; /* Color primario oscuro */
+    --secondary-color: #16213e; /* Color secundario oscuro */
+    --dark-bg: #1a1a2e; /* Fondo oscuro */
+    --light-bg: #e94560; /* Fondo claro */
+    --text-color: #eaeaea; /* Color de texto claro */
     --light-shadow: rgba(0, 0, 0, 0.1);
     --medium-shadow: rgba(0, 0, 0, 0.15);
 }
@@ -15,40 +15,41 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
     color: var(--text-color);
 }
 
 header {
-    background-color: var(--primary-color); /* Color azul en el encabezado */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--light-bg);
     padding: 1.5rem 0;
     text-align: center;
     box-shadow: 0 4px 6px var(--light-shadow);
-    position: relative; /* Para manejar el menú desplegable si es necesario */
+    position: relative;
 }
 
-/* Media query para dispositivos móviles */
 @media (max-width: 600px) {
     nav ul {
-        flex-direction: column; /* Cambia la dirección del menú a vertical */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0; /* Espacio entre elementos del menú */
+        margin: 10px 0;
     }
 
     nav ul li a {
-        font-size: 1rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+        font-size: 1rem;
     }
 
     header h1 {
-        font-size: 2rem; /* Ajusta el tamaño del título */
+        font-size: 2rem;
+        
     }
 
     header p {
-        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+        font-size: 1.2rem;
+        
     }
 }
 
@@ -70,10 +71,11 @@ nav ul li a {
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    color: var(--light-bg);
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color); /* Color secundario en hover */
+    color: var(--light-bg);
 }
 
 .linkedin-icon img {
@@ -90,6 +92,7 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    
 }
 
 section {
@@ -98,7 +101,7 @@ section {
 }
 
 #home {
-    background: linear-gradient(135deg, var(--primary-color), var(--dark-bg)); /* Gradiente azul en la sección de inicio */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: #fff;
     padding: 5rem 2rem;
     display: flex;
@@ -111,6 +114,7 @@ section {
 #home h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--light-bg);
     animation: fadeInDown 1s ease-in-out;
 }
 
@@ -120,14 +124,14 @@ section {
 }
 
 #about, #projects, #contact, #linkedin {
-    background-color: #fff;
+    background-color: var(--primary-color);
     color: var(--text-color);
 }
 
 h2 {
     margin-bottom: 2.5rem;
     font-size: 2.2rem;
-    color: var(--primary-color); /* Color azul en encabezados */
+    color: var(--light-bg);
     position: relative;
     display: inline-block;
 }
@@ -136,7 +140,7 @@ h2::after {
     content: '';
     width: 50px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--light-bg);
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -177,7 +181,7 @@ h2::after {
 .linkedin-button {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background-color: var(--primary-color); /* Color azul en el botón */
+    background-color: var(--light-bg);
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
@@ -186,7 +190,7 @@ h2::after {
 }
 
 .linkedin-button:hover {
-    background-color: #005582; /* Color de hover más oscuro */
+    background-color: #d32f2f;
     transform: translateY(-3px);
 }
 
@@ -195,13 +199,14 @@ h2::after {
 }
 
 .project {
-    background-color: #e9ecef;
+    background-color: var(--secondary-color);
     padding: 2rem;
     margin: 1.5rem 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--light-shadow);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .project:hover {
@@ -211,18 +216,18 @@ h2::after {
 
 .project h3 {
     margin-top: 0;
-    color: var(--primary-color); /* Color azul en proyectos */
+    color: var(--light-bg);
 }
 
 .project a {
-    color: var(--primary-color);
+    color: var(--light-bg);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .project a:hover {
-    color: #138496; /* Color de hover más claro */
+    color: #ff6f61;
 }
 
 form {
@@ -246,14 +251,14 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    border-color: var(--primary-color); /* Color azul en el borde del foco */
+    border-color: var(--light-bg);
     outline: none;
 }
 
 form button {
     margin-top: 1.5rem;
     padding: 0.75rem 2.5rem;
-    background-color: var(--primary-color); /* Color azul en el botón */
+    background-color: var(--light-bg);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -262,7 +267,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #005582; /* Color de hover más oscuro */
+    background-color: #d32f2f;
     transform: translateY(-3px);
 }
 
@@ -295,8 +300,8 @@ form button:hover {
 }
 
 footer {
-    background-color: var(--primary-color); /* Color azul en el pie de página */
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 1.5rem 0;
     box-shadow: 0 -2px 6px var(--light-shadow);
@@ -327,13 +332,13 @@ footer {
 
 #certifications {
     padding: 3rem 0;
-    background-color: #f8f9fa; /* Fondo claro para certificaciones */
+    background-color: var(--primary-color);
     text-align: center;
 }
 
 .certification {
     margin: 1.5rem 0;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 8px;
     box-shadow: 10px 10px 10px var(--medium-shadow);
     padding: 2rem;
@@ -346,7 +351,7 @@ footer {
 }
 
 .certification h3 {
-    color: #073862; /* Color azul en certificaciones */
+    color: var(--light-bg);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -357,7 +362,7 @@ footer {
 }
 
 .certification a:hover {
-    color: var(--secondary-color); /* Color secundario en hover */
+    color: var(--light-bg);
 }
 
 #scrollToTopBtn {
@@ -368,8 +373,8 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #48ff00;
-    color: rgb(255, 0, 0);
+    background-color: var(--light-bg);
+    color: var(--primary-color);
     cursor: pointer;
     padding: 15px;
     border-radius: 50%;
@@ -378,10 +383,11 @@ footer {
 }
 
 #scrollToTopBtn:hover {
-    background-color: #0056b3;
+    background-color: #d32f2f;
 }
 
 .card img {
     max-height: 150px;
     object-fit: contain;
+    
 }
