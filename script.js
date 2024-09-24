@@ -12,10 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    scrollToTopBtn.onclick = function() {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
-    };
-
     // Form validation
     const form = document.querySelector('form');
     if (form) {
@@ -41,4 +37,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('You will be redirected to WhatsApp.');
         });
     }
+});
+
+
+const scrollToTopBtn = document.querySelector('#scroll-to-top-btn');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 100) {
+    scrollToTopBtn.style.display = 'block';
+  } else {
+    scrollToTopBtn.style.display = 'none';
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
