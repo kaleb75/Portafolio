@@ -1,5 +1,4 @@
 /* styles.css */
-
 /* Define CSS variables for colors */
 :root {
     --primary-color: #1a1a2e; /* Color primario oscuro */
@@ -10,7 +9,6 @@
     --light-shadow: rgba(0, 0, 0, 0.1);
     --medium-shadow: rgba(0, 0, 0, 0.15);
     --tercolor: #00ff0073;
-
 }
 
 body {
