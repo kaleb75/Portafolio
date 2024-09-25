@@ -425,3 +425,32 @@ footer {
       #scroll-to-top-btn:hover {
         background-color: #555;
       }
+
+      /* Estilo para el botón flotante */
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 1s; /* Transición de opacidad de 1 segundo */
+        background-color: #f44336; /* Color de fondo */
+        color: white; /* Color del texto */
+        border: none; /* Sin bordes */
+        border-radius: 50%; /* Forma circular */
+        width: 50px; /* Ancho */
+        height: 50px; /* Altura */
+        font-size: 24px; /* Tamaño del texto */
+        cursor: pointer; /* Cursor en forma de mano */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra */
+        display: none; /* Inicialmente no se muestra */
+    }
+    
+    #scrollToTopBtn.show {
+        display: block; /* Mostrar cuando tiene la clase show */
+        opacity: 1; /* Hacer visible */
+    }
+    
+    #scrollToTopBtn:hover {
+        background-color: #c62828; /* Color de fondo al pasar el mouse */
+    }
+    
