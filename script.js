@@ -39,9 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
 const scrollToTopBtn = document.querySelector('#scroll-to-top-btn');
-
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 100) {
     scrollToTopBtn.style.display = 'block';
