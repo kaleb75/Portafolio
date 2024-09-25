@@ -1,16 +1,23 @@
 // scripts.js
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Scroll to top button
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  // Obtener el botón
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    };
+  // Mostrar el botón cuando se hace scroll
+  window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollToTopBtn.classList.add('show'); // Añadir clase para mostrar
+      } else {
+          scrollToTopBtn.classList.remove('show'); // Quitar clase para ocultar
+      }
+  };
+
+  // Función para volver al tope de la página
+  scrollToTopBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+
 
     // Form validation
     const form = document.querySelector('form');
@@ -54,3 +61,17 @@ scrollToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// Mostrar el botón cuando se desplace hacia abajo
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById('scrollToTopBtn').classList.add('show'); // Añadir clase para mostrar
+  } else {
+      document.getElementById('scrollToTopBtn').classList.remove('show'); // Quitar clase para ocultar
+  }
+};
+
+// Función para volver al tope de la página
+document.getElementById('scrollToTopBtn').onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
