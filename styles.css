@@ -9,6 +9,7 @@
     --light-shadow: rgba(0, 0, 0, 0.1);
     --medium-shadow: rgba(0, 0, 0, 0.15);
     --tercolor: #00ff0073;
+    --celeste: #00bfff; /* Color celeste */
 }
 
 body {
@@ -17,6 +18,12 @@ body {
     padding: 0;
     background-color: var(--dark-bg);
     color: var(--text-color);
+    animation: backgroundFade 5s infinite alternate;
+}
+
+@keyframes backgroundFade {
+    0% { background-color: var(--dark-bg); }
+    100% { background-color: var(--secondary-color); }
 }
 
 header {
@@ -26,31 +33,12 @@ header {
     text-align: center;
     box-shadow: 0 4px 6px var(--light-shadow);
     position: relative;
+    animation: headerSlideIn 1s ease-in-out;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-        
-    }
-
-    header p {
-        font-size: 1.2rem;
-        
-    }
+@keyframes headerSlideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
 }
 
 nav ul {
@@ -59,6 +47,12 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    animation: navFadeIn 2s ease-in-out;
+}
+
+@keyframes navFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 nav ul li {
@@ -66,16 +60,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--light-bg);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
-    transition: color 0.3s ease;
-    color: var(--light-bg);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--light-bg);
+    color: var(--celeste);
+    transform: scale(1.1);
 }
 
 .linkedin-icon img {
@@ -85,19 +79,24 @@ nav ul li a:hover {
 }
 
 .linkedin-icon img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(10deg);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    
 }
 
 section {
     padding: 5rem 0;
     text-align: center;
+    animation: sectionFadeIn 1.5s ease-in-out;
+}
+
+@keyframes sectionFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 #home {
@@ -134,6 +133,13 @@ h2 {
     color: var(--light-bg);
     position: relative;
     display: inline-block;
+    animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
 }
 
 h2::after {
@@ -165,7 +171,7 @@ h2::after {
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(5deg);
 }
 
 .about-text {
@@ -191,7 +197,7 @@ h2::after {
 
 .linkedin-button:hover {
     background-color: #d32f2f;
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(-3deg);
 }
 
 .linkedin-widget {
@@ -206,11 +212,10 @@ h2::after {
     box-shadow: 0 4px 8px var(--light-shadow);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(2deg);
     box-shadow: 0 6px 12px var(--medium-shadow);
 }
 
@@ -227,7 +232,7 @@ h2::after {
 }
 
 .project a:hover {
-    color: #ff6f61;
+    color: var(--celeste);
 }
 
 form {
@@ -268,7 +273,7 @@ form button {
 
 form button:hover {
     background-color: #d32f2f;
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(-3deg);
 }
 
 .whatsapp-contact {
@@ -296,7 +301,7 @@ form button:hover {
 
 .whatsapp-contact a:hover {
     background-color: #1DA851;
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(3deg);
 }
 
 footer {
@@ -306,6 +311,12 @@ footer {
     padding: 1.5rem 0;
     box-shadow: 0 -2px 6px var(--light-shadow);
     margin-top: 3rem;
+    animation: footerSlideIn 1s ease-in-out;
+}
+
+@keyframes footerSlideIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
@@ -330,6 +341,32 @@ footer {
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    animation: fadeOut 1s forwards;
+}
+
+.visible {
+    animation: fadeIn 1s forwards;
+}
+
 #certifications {
     padding: 3rem 0;
     background-color: var(--primary-color);
@@ -347,7 +384,7 @@ footer {
 
 .certification:hover {
     box-shadow: 30px 30px 30px var(--medium-shadow);
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(2deg);
 }
 
 .certification h3 {
@@ -362,14 +399,14 @@ footer {
 }
 
 .certification a:hover {
-    color: var(--light-bg);
+    color: var(--celeste);
 }
 
 .card img {
     max-height: 150px;
     object-fit: contain;
-    
 }
+
 .skill {
     display: flex;
     align-items: center;
@@ -384,7 +421,6 @@ footer {
 
 .skill span {
     flex-grow: 1; /* Para que el texto use el espacio disponible */
-    
 }
 
 .progress-bar {
@@ -400,57 +436,63 @@ footer {
     height: 100%; /* Altura completa */
     background-color: var(--tercolor); /* Color de la barra de progreso */
     width: 80%; /* Cambia este porcentaje para representar tu habilidad */
+    animation: progressFill 2s ease-in-out;
 }
+
+@keyframes progressFill {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
 .skill-level {
     margin-left: 10px; /* Espacio entre la barra de progreso y el nivel */
     font-size: 0.8rem; /* Tamaño del texto al 80% */
 }
 
-    #scroll-to-top-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-        display: none;
-      }
-      
-      #scroll-to-top-btn:hover {
-        background-color: #555;
-      }
+#scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: none;
+}
 
-      /* Estilo para el botón flotante */
-      #scrollToTopBtn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        opacity: 0; /* Inicialmente invisible */
-        transition: opacity 1s; /* Transición de opacidad de 1 segundo */
-        background-color: #f44336; /* Color de fondo */
-        color: white; /* Color del texto */
-        border: none; /* Sin bordes */
-        border-radius: 50%; /* Forma circular */
-        width: 50px; /* Ancho */
-        height: 50px; /* Altura */
-        font-size: 24px; /* Tamaño del texto */
-        cursor: pointer; /* Cursor en forma de mano */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra */
-        display: none; /* Inicialmente no se muestra */
-    }
-    
-    #scrollToTopBtn.show {
-        display: block; /* Mostrar cuando tiene la clase show */
-        opacity: 1; /* Hacer visible */
-    }
-    
-    #scrollToTopBtn:hover {
-        background-color: #c62828; /* Color de fondo al pasar el mouse */
-    }
-    
+#scroll-to-top-btn:hover {
+    background-color: #555;
+}
+
+/* Estilo para el botón flotante */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1s; /* Transición de opacidad de 1 segundo */
+    background-color: #f44336; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 50%; /* Forma circular */
+    width: 50px; /* Ancho */
+    height: 50px; /* Altura */
+    font-size: 24px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor en forma de mano */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra */
+    display: none; /* Inicialmente no se muestra */
+}
+
+#scrollToTopBtn.show {
+    display: block; /* Mostrar cuando tiene la clase show */
+    opacity: 1; /* Hacer visible */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #c62828; /* Color de fondo al pasar el mouse */
+}
