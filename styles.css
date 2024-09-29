@@ -496,3 +496,10 @@ footer {
 #scrollToTopBtn:hover {
     background-color: #c62828; /* Color de fondo al pasar el mouse */
 }
+.cert-logo {
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
